@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Secure Audit Gateway | Support Bridge</title>
+    <!-- Google Fonts + System Font Stack -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (only used for secondary icons, but we keep minimal) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body {
+            background: linear-gradient(145deg, #eef2f5 0%, #f9fbfd 100%);
+            font-family: 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+.audit-card {
+            max-width: 520px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.02);
+            padding: 2rem 1.8rem;
+            transition: all 0.2s ease;
+            text-align: center;
+            border: 1px solid rgba(0, 128, 96, 0.08);
+        }
+.gateway-badge {
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #5b6e8c;
+            background: #f0f4f9;
+            display: inline-block;
+            padding: 0.25rem 0.8rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+        }
+.security-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .security-icon img {
+            width: 70px;
+            height: auto;
+            filter: drop-shadow(0 4px 6px rgba(0,128,96,0.15));
+            transition: transform 0.2s ease;
+        }
+        .security-icon img:hover {
+            transform: scale(1.02);
+        }
+h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1a2c3e;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.75rem;
+        }
+.subtext {
+            font-size: 0.95rem;
+            color: #4a5b6e;
+            background: #f8fafc;
+            padding: 0.6rem 1rem;
+            border-radius: 60px;
+            display: inline-block;
+            margin-bottom: 1.8rem;
+            font-weight: 500;
+            border: 1px solid #e9edf2;
+        }
+.btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 100px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            font-family: 'Inter', system-ui, sans-serif;
+            box-sizing: border-box;
+        }
+/* PRIMARY BUTTON (WhatsApp only) */
+        .btn-primary {
+            background: #008060;
+            color: white;
+            font-size: 1.2rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0;
+            border: none;
+            box-shadow: 0 8px 18px rgba(0, 128, 96, 0.25);
+            letter-spacing: -0.2px;
+            font-weight: 700;
+            animation: gentleBreathing 2.2s infinite ease-in-out;
+        }
+.btn-primary:hover {
+            background: #006e52;
+            transform: scale(1.01);
+            box-shadow: 0 12px 22px rgba(0, 128, 96, 0.3);
+            animation: none;
+        }
+@keyframes gentleBreathing {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 14px rgba(0, 128, 96, 0.2);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 12px 26px rgba(0, 128, 96, 0.35);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 14px rgba(0, 128, 96, 0.2);
+            }
+        }
+.audit-footer {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #6f7d91;
+            border-top: 1px solid #ecf1f6;
+            padding-top: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            letter-spacing: 0.2px;
+        }
+.audit-footer i {
+            font-size: 0.7rem;
+            color: #008060;
+            opacity: 0.8;
+        }
+@media (max-width: 480px) {
+            .audit-card {
+                padding: 1.6rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .btn-primary {
+                font-size: 1rem;
+                padding: 0.9rem 1rem;
+            }
+            .security-icon img {
+                width: 55px;
+            }
+            .subtext {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+.btn:focus-visible {
+            outline: 3px solid #008060;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="audit-card">
+    <div class="gateway-badge">
+        <i class="fas fa-shield-haltered" style="font-size: 0.7rem; margin-right: 4px;"></i> SECURE AUDIT GATEWAY
+    </div>
+<!-- Security Icon: external PNG (your custom shield) -->
+    <div class="security-icon">
+        <img src="https://static.wixstatic.com/media/76ec40_187fd963696c4c608cbf28acfb4cd79f~mv2.png"
+             alt="Secure Audit Shield"
+             loading="eager">
+    </div>
+<h1>Secure Audit Channel</h1>
+<div class="subtext">
+        <i class="fas fa-user-check" style="margin-right: 6px; font-size: 0.8rem;"></i> Specialist Assigned: James &nbsp;|&nbsp; <i class="fas fa-ticket-alt"></i> Please have your Ticket ID ready for verification.
+    </div>
+<!-- ========================================= -->
+    <!--  ONLY WHATSAPP BUTTON (EASY TO EDIT)      -->
+    <!--  Change the link below to update the button -->
+    <!-- ========================================= -->
+    <div id="whatsapp-container">
+        <a href="https://wa.link/oesp4s" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="whatsapp-btn">
+            <span>⚡</span> Start Audit
+        </a>
+    </div>
+<div class="audit-footer">
+        <i class="fas fa-lock"></i>
+        <span>End-to-end encrypted communication for store audits.</span>
+        <i class="fas fa-shield-virus" style="font-size: 0.7rem;"></i>
+    </div>
+</div>
+<!-- Optional: small script to make link easy to edit (just modify the href above directly) -->
+<!--
+    TO CHANGE THE WHATSAPP LINK:
+    Simply edit the href="https://t.me/Shoplfysupport?text=My%20ticket%20ID%20is%20%23/" inside the <a> tag above.
+    Replace it with your new WhatsApp channel link.
+-->
+</body>
+</html>
